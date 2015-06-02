@@ -1,0 +1,11 @@
+CACHE_SIZE=1048576
+SERVER_PORT=9876
+SERVER_LOG=/home/apgdst/np/d0331092/new_final_demo/server/serverLogs/
+CACHE_LOG=/home/apgdst/np/d0331092/new_final_demo/server/cacheLogs/
+USER_LOG=/home/apgdst/np/d0331092/new_final_demo/server/userLogs/
+BANDWIDTH_FILE=/home/apgdst/np/d0331092/new_final_demo/server/bandwidth.txt
+CACHE_FILE=/home/apgdst/np/d0331092/new_final_demo/server/cache.txt
+BLOCKEDSITES_FILE=/home/apgdst/np/d0331092/new_final_demo/server/blockedSites.txt
+USER_DETAILS_FILE=/home/apgdst/np/d0331092/new_final_demo/server/userdetails.txt
+USER_TIMEOUT=1800
+CACHE_POLICY=LRU

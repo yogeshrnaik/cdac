@@ -1,0 +1,116 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}{\s3 heading 3;}{\s4 heading 4;}{\s5 heading 5;}{\s6 heading 6;}}
+\viewkind4\uc1\pard\nowidctlpar\sb100\sa100\ul\b\f0\fs24 Design Document - Group 6\ulnone\b0\par
+\ul\b Title\ulnone :\tab\tab\tab\b0 Caching HTTP proxy server\par
+\b =====================================================================================\par
+\ul Group Members\ulnone :\b0\par
+\trowd\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx2955\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx5910\pard\intbl\b  Name\cell  Student ID\cell\row
+\b0\trowd\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx2955\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx5910\intbl  Yogesh R. Naik\cell  D0331092\cell\row
+\intbl  Anuda Kedia\cell  D0112041\cell\row
+\intbl  Sandeep Borkar\cell  D0331063\cell\row
+\intbl  Prachi Sant\cell  D0331067\cell\row
+\intbl  Trishna Shah\cell  D0331082\cell\row
+\pard\nowidctlpar\sb100\sa100\b =====================================================================================\par
+\pard\sb100\sa100\ul Tools/Technologies\ulnone\b0\par
+\pard\keepn\s1\par
+1) OS  - Unix\par
+2) Language - Java 1.3 / 1.4\par
+3) Packages - java.net, javax.swing, java.awt, java.io, java.util.\par
+\pard\nowidctlpar\sb100\sa100\b =====================================================================================\b0\par
+\pard\keepn\s2\ul\b Final Design Document\ulnone\par
+\pard\b0\par
+The HTTP caching proxy will have the following packages:\par
+\par
+\b 1) \ul httpProxy\ulnone  - \par
+\tab\b0 This package contains following classes:\par
+\pard\nowidctlpar\b a) ProxyServer - \par
+\b0\tab The server listens for connections from clients and spawns a new thread for every client. This thread then handles the requests for that client.\par
+\pard *******************************************************************************************************************************\par
+\pard\nowidctlpar\b b) ProxyChild - \par
+\b0\tab The proxy child runs as a separate thread. The proxy child checks whether the client is active (i.e. authenticated) else it will prompt the user for authetication. It delegates this resposibility to the security manager. If client is a valid user, the thread handles all the requests for that client else the connection to the server is closed.\par
+\pard *******************************************************************************************************************************\par
+\pard\nowidctlpar\b c) HttpRequest - \par
+\b0\tab Http Request is received by the server from the client. It consists of http command, header and a body if required.\par
+\pard *******************************************************************************************************************************\par
+\pard\nowidctlpar\b d) HttpResponse - \par
+\b0\tab Http response is sent by server to the client for the request from the client. It includes response from either the proxy server or the actual web-server. It includes the actual contents of the requested page like images, text,etc.\b\par
+\pard\b0 *******************************************************************************************************************************\par
+\pard\keepn\s6\b e) HttpHeader - \par
+\pard\b0\tab This represents the header information that is included in a request or response object. It stores all relevant headers that are required by the caching policy.\par
+*******************************************************************************************************************************\par
+\pard\keepn\s6\b f) HttpRequestHandler - \par
+\pard\b0         The ProxyChild delegates the request handling to this. Depending on the request, the response page is either fetched from the cache or the web server and is returned to the Proxy child.\par
+*******************************************************************************************************************************\par
+\pard\keepn\s6\b g) RequestLine- \par
+\pard\b0\tab This represents an HTTP command sent to the server. It contains the command name, url and version information.\par
+*******************************************************************************************************************************\par
+\pard\keepn\s6\b h) StatusLine- \par
+\pard\b0\tab This represents the response status for the request sent to the origin server.\par
+*******************************************************************************************************************************\par
+\pard\keepn\s6\b i) HttpParser - \par
+\pard\b0\tab This class is used to parse the request received from the browser and response received from the origin server. Also, while reading the response from the origin server, the bandwidth restriction is taken care of.\par
+\pard\nowidctlpar\sb100\sa100\b =====================================================================================\b0\par
+\pard\b 2) \ul cache\ulnone  - \par
+\pard\keepn\s5 a) Cache Manager - \par
+\pard\b0\tab This singleton class is used to decide which pages would be entered into the cache. It will tell the proxy server whether the requested page is available in the cache. It also performs removal of expired pages and accomodation of new pages when no space is available in cache. The logic behind the caching policies (FIFO, LRU, etc.) is incorporated here.\par
+\pard *******************************************************************************************************************************\par
+\b b) Cached Content - \b0\par
+\pard\nowidctlpar\tab This class handles all information related to the cached pages like the name of the URL, no. of hits, the actual page contents, last accessed time, expiry date etc.\par
+\pard\nowidctlpar\sb100\sa100\b =====================================================================================\b0\par
+\pard\b 3) \ul util\ulnone  - \par
+a) Security Manager - \par
+\pard\nowidctlpar\b0\tab This singleton class checks for blocked sites as well as it performs user authentication and checks for activeness of user. i.e. (a user is said to be active if he has logged in).\par
+\pard *******************************************************************************************************************************\par
+\b b) Logger - \par
+\tab\b0 This is a singleton class used to log messages to Server log, Cache log and to appropriate User log files.\b\par
+\b0 *******************************************************************************************************************************\par
+\b c)  DateFormatter - \par
+\tab\b0 This class is used to format the date object in standard format. Also, to increment date by some days. This is used to set clean up dates and expiry dates for cached pages.\par
+*******************************************************************************************************************************\par
+\b d)  ConfigProperties - \par
+\tab\b0 This class is used to load the proxy configuration properties from configuration file and make changes to the same. \par
+*******************************************************************************************************************************\par
+\b e)  BandwidthProperties - \par
+\b0\tab This class is used to load the bandwidth limits for various user groups and modify the same.\par
+*******************************************************************************************************************************\par
+\b f) ActiveUser - \par
+\tab\b0 This class represents a logged in user. It is also used to log message to the user log file.\b\par
+=====================================================================================\b0\par
+\b 4) UI - \b0\par
+\pard\nowidctlpar\tab It is an graphical user interface provided to the administrator to manage tasks like bandwidth management for different user goups, blocking sites etc.\par
+\b =====================================================================================\par
+\pard\ul Files:\ulnone\b0\par
+The various files that will be used to store information such as user groups, users info, proxy configurations, etc. are as follows:\par
+\par
+\b 1) bandwidth.txt - \b0\par
+This file will contain name of all user groups and the maximum bandwidth allowed for that group. \par
+The format of the file will be: UserGroupName=Max.BandwidthAllowed\par
+\par
+\b 2) userdetails.txt - \b0\par
+This file will contain information of all users. \par
+For a user the information stored inlcudes UserName, Password, User group name (name of the user group to which this user belogs)\par
+The format of the file will be: Encoded String : UserName : Password : UserGroupName ;\par
+\par
+\b 3) configuration.txt - \b0\par
+This file contains all the attributes and their values required by proxy server at the startup. \par
+The format of the file will be: AttributeName=Value\par
+\par
+\b 4) blockedSites.txt - \par
+\b0 This file contains the information of all sites that are blocked.\par
+\b =====================================================================================\par
+\ul Cache Management\par
+\ulnone\b0\par
+\tab Inorder to maintain the freshness of pages and to remove unwanted & stale pages when the cache memory is full, the following policies will be used:\par
+\par
+\b 1) First In First Out - \par
+\b0\tab The cache contents will be queued up in the Cache memory. In case cache memory is full, the page that is at the start of the queue will be thrown out.\par
+\par
+\b 2) Least Recently Used - Number of hits & date last accessed\par
+\b0\tab The above two properties will also be set and updated for each cached document. In the event of space constraints, both these values will be considered to remove pages from the cache.\par
+\b =====================================================================================\par
+\pard\nowidctlpar\sb100\sa100\ul Assumptions\ulnone :\ul\par
+\ulnone\b0 1) There will be some static number of users and user groups present in the system. No wizard will be provided to add or remove user groups and users.\par
+\b ===================================================================================\par
+\pard\b0\par
+}
+ 
