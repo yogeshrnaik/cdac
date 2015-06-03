@@ -1,7 +1,8 @@
 ## CDAC Projects
 
-All the projects done during CDAC (formerly National Center for Software Technology) course 
-i.e. Post Graduate Diploma in Software technology
+All the projects done during CDAC (formerly National Center for Software Technology) courses namely:
+* Post Graduate Diploma in Software technology
+* Advanced Post Graduate Diploma in Software technology
 
 ### CPU Scheduling Algorithms Simulation
 This project contains a .C program file that can be used to simulate four CPU Scheduling algorithms namely: 
