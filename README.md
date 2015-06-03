@@ -21,5 +21,12 @@ This is a HTTP Proxy Server developed in Java. This proxy server has following f
 For more information, please check the document inside the folder: "HTTP proxy server with Caching"
 
 ### Programming-Paradigm
+The document "Programming-Paradigm-Project.doc" in this folder explains five different programming paradigms.
+* Object-oriented programming
+* Imperative / Procedural Programming
+* Functional programming
+* Logical programming 
+* Constraint Programming
+The "Problem Solutions" folder contains solution to a problem in four different programming languages representing one of the programming paradigms.
 
 ### Simulation of Network Routing Protocols
