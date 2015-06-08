@@ -30,3 +30,6 @@ The document "Programming-Paradigm-Project.doc" in this folder explains five dif
 The "Problem Solutions" folder contains solution to a problem in four different programming languages representing one of the programming paradigms.
 
 ### Simulation of Network Routing Protocols
+This project contains two Java files one for each of the following Network Routing protocol simulation.
+* Distance Vector Routing
+* Link State Routing
