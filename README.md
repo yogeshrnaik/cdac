@@ -27,6 +27,7 @@ The document "Programming-Paradigm-Project.doc" in this folder explains five dif
 * Functional programming
 * Logical programming 
 * Constraint Programming
+
 The "Problem Solutions" folder contains solution to a problem in four different programming languages representing one of the programming paradigms.
 
 ### Simulation of Network Routing Protocols
