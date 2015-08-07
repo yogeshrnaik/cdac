@@ -1,0 +1,11 @@
+
+a= (DESCRIPTION =
+(ADDRESS =
+(PROTOCOL =a)
+(HOST =a)
+(PORT =a)
+)
+CONNECT_DATA =
+(SID =a)
+)
+
