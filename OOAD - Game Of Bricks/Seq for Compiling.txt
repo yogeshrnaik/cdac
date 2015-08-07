@@ -1,7 +1,0 @@
-Compile the java source files in the following sequence:
-1) CONSTANTS.java
-2) Ball.java
-3) Player.java
-4) Paddle.java
-5) Brick.java
-6) GameHandler.java
