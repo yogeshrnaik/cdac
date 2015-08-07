@@ -23,6 +23,9 @@ For more information, please check the document inside the folder: "HTTP proxy s
 ### OOAD - Game Of Bricks
 This contains Game of Bricks developed in Java. This project was done as part of Object Oriented Analysis and Design module of CDAC's course.
 
+### PCCP - Game Of Bricks
+This contains Game of Bricks developed in C++ and curses library. This project was done as part of Programmign in C and C++ module of CDAC's course.
+
 ### Programming-Paradigm
 The document "Programming-Paradigm-Project.doc" in this folder explains five different programming paradigms.
 * Object-oriented programming
