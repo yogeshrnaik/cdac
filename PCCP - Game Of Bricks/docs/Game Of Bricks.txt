@@ -1,0 +1,21 @@
+27. Game of Bricks (text)
+
+The aim is to develop an application on the lines of the well-known arcade game of "Bricks".
+
+The game consists of a paddle, a ball and a set of bricks. The ball moves on the screen and bounces off obstructions like the paddle, the walls and the bricks. When the ball bounces off a brick, the brick is broken and it disappears. On the disappearance of a brick, the player gets points. Bricks are arranged in multiple rows on the screen. Additionally, there are bricks of different colors. The bricks color indicates its behaviour. For example, a red brick means that the player gets 10 points, while a yellow brick will have to be hit twice and it will fetch the player 70 points.
+
+The game consists of multiple levels. A new level is started when the player completes the current level. A level is said to be complete when all the bricks on the screen have been destroyed. A level is an arrangement of bricks. The layout of the bricks for a level is not constant across all levels. Each level can have its own layout. The game also contains a special brick, which cannot be broken, ever. Such bricks do not fetch points to the player. They are primarily used to create hindrances for the player and also to increase the skill required to play a particular level.
+
+The player playing the game can only control the paddle. The paddle is used to hit the ball and maneuver it such that the ball hits the bricks. If the ball passes the paddle (player misses the ball), the ball is lost and the player loses one chance. When a new game is started, the player gets either 5 chances or 3 chances.
+
+Note
+
+The game has to accept the layout of the bricks in a level from an input file. For each level, there has to be one input file. The convention of "levelXX.txt" can be used to name the level files, where XX indicates the level number. Levels are numbered as 01, 02, and so on. Hence the input files will be named "level01.txt", "level02.txt", and so on. On reading the input, the application creates an appropriate data structure required to play the game.
+
+Group Size: 4
+
+Platform:
+    Linux
+        - text mode, GNU C++, curses Library
+    Windows
+        - text mode, GNU C++, curses Library
