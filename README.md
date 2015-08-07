@@ -20,6 +20,9 @@ This is a HTTP Proxy Server developed in Java. This proxy server has following f
 
 For more information, please check the document inside the folder: "HTTP proxy server with Caching"
 
+### OOAD - Game Of Bricks
+This contains Game of Bricks developed in Java. This project was done as part of Object Oriented Analysis and Design module of CDAC's course.
+
 ### Programming-Paradigm
 The document "Programming-Paradigm-Project.doc" in this folder explains five different programming paradigms.
 * Object-oriented programming
