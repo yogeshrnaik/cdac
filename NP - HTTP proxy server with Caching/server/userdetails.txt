@@ -1,7 +1,0 @@
-Basic ZDAzMzEwOTI6eW9nZXNo 	: d0331092 	: yogesh 	: student ;
-Basic YTph 			: a 		: a 		: student ;
-Basic ZDAzMzEwNjc6cHJhY2hp 	: d0331067 	: prachi 	: student ;
-Basic c3R1ZGVudDE6c3R1ZGVudDE=	: student1	: student1	: student ;
-Basic c3RhZmYxOnN0YWZmMQ== 	: staff1 	: staff1 	: staff   ;
-Basic c3RhZmYyOnN0YWZmMg==	: staff2 	: staff2 	: staff   ;
-Basic YWRtaW46YWRtaW4=		: admin		: admin		: admin   ;

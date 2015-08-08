@@ -1,3 +1,0 @@
-student=5120
-staff=10240
-admin=10240
