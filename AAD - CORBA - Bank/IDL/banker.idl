@@ -1,0 +1,37 @@
+module BankApp
+{
+	struct CustDetails
+	{
+		string name;
+		string city;
+		string acctno;
+	};
+
+	struct AcctDetails
+	{
+		string acctType;
+		string acctno;
+		float balance;	
+	};
+
+	interface Account
+	{
+		long withDraw(in float amt,in string acctno);
+		long deposit(in float amt,in string acctno);
+		//AcctDetails getAcctDetails(in string acctno);
+		float balanceQuery(in string acctno);
+	};
+
+	interface Customer
+	{
+		CustDetails getCustDetails(in string acctno);
+	};
+
+	interface Bank
+	{
+		long createAccount(in string accountid,in string password,in string initBalance,in string custname,in string city,in string acctType);
+		Account getAccount(in string acctno);
+		//Customer getCustomer(in string acctno);
+		long login(in string uname,in string passwd);
+	};
+};

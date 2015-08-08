@@ -1,0 +1,2 @@
+java BankServer -ORBInitialPort 1050 -ORBInitialHost localhost&
+java BankClient -ORBInitialPort 1050 -ORBInitialHost localhost
