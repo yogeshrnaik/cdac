@@ -1,298 +1,427 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectType>Local</ProjectType>
-    <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EBBE546E-AB01-4145-BF4C-7E72F519F837}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>App.ico</ApplicationIcon>
-    <AssemblyKeyContainerName>
-    </AssemblyKeyContainerName>
-    <AssemblyName>DBManager</AssemblyName>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
-    <DefaultClientScript>JScript</DefaultClientScript>
-    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
-    <DefaultTargetSchema>IE50</DefaultTargetSchema>
-    <DelaySign>false</DelaySign>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>DBManager</RootNamespace>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>
-    </StartupObject>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile>
-    </ConfigurationOverrideFile>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>
-    </DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <NoStdLib>false</NoStdLib>
-    <NoWarn>
-    </NoWarn>
-    <Optimize>false</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile>
-    </ConfigurationOverrideFile>
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>
-    </DocumentationFile>
-    <DebugSymbols>false</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <NoStdLib>false</NoStdLib>
-    <NoWarn>
-    </NoWarn>
-    <Optimize>true</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>none</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
-    </Reference>
-    <COMReference Include="stdole">
-      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App.ico" />
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\ConnectionHistory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\ConnectionTreeNode.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\Database.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\DBLink.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\DBLinkPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\EditorPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\FindPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\Function.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\MyEditorPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\MyFindPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\MyImageList.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\Procedure.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\Schema.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\Sequence.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\SequencePanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\SqlQuery.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\SQLWindowPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\StringTokenizer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\Table.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\TablePanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\Trigger.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\User.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\UserPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="classes\ValidDatabasesInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="classes\View.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="forms\AboutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\ConnectionHistoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\DBManagerMainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\EditorForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\FindForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\frmAutoConn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\frmNewConn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\frmTables.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\ObjectNamePrompt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\PasswordPrompt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\SchemaNamePrompt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\SqlnetForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\SQLPanelKeLiye.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\TnsoraForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <EmbeddedResource Include="classes\DBLinkPanel.resx">
-      <DependentUpon>DBLinkPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="classes\SequencePanel.resx">
-      <DependentUpon>SequencePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="classes\SQLWindowPanel.resx">
-      <DependentUpon>SQLWindowPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="classes\TablePanel.resx">
-      <DependentUpon>TablePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="classes\UserPanel.resx">
-      <DependentUpon>UserPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\AboutForm.resx">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\ConnectionHistoryForm.resx">
-      <DependentUpon>ConnectionHistoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\DBManagerMainForm.resx">
-      <DependentUpon>DBManagerMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\EditorForm.resx">
-      <DependentUpon>EditorForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\FindForm.resx">
-      <DependentUpon>FindForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmAutoConn.resx">
-      <DependentUpon>frmAutoConn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmNewConn.resx">
-      <DependentUpon>frmNewConn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmTables.resx">
-      <DependentUpon>frmTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\ObjectNamePrompt.resx">
-      <DependentUpon>ObjectNamePrompt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\PasswordPrompt.resx">
-      <DependentUpon>PasswordPrompt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\SchemaNamePrompt.resx">
-      <DependentUpon>SchemaNamePrompt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\SqlnetForm.resx">
-      <DependentUpon>SqlnetForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\SQLPanelKeLiye.resx">
-      <DependentUpon>SQLPanelKeLiye.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\TnsoraForm.resx">
-      <DependentUpon>TnsoraForm.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
-</Project>
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{EBBE546E-AB01-4145-BF4C-7E72F519F837}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "App.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "DBManager"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "DBManager"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "true"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
+                />
+                <Reference
+                    Name = "stdole"
+                    Guid = "{00020430-0000-0000-C000-000000000046}"
+                    VersionMajor = "2"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "primary"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "App.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\ConnectionHistory.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\ConnectionTreeNode.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\Database.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\DBLink.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\DBLinkPanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\DBLinkPanel.resx"
+                    DependentUpon = "DBLinkPanel.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "classes\EditorPanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\FindPanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\Function.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\MyEditorPanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\MyFindPanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\MyImageList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\Procedure.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\Schema.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\Sequence.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\SequencePanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\SequencePanel.resx"
+                    DependentUpon = "SequencePanel.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "classes\SqlQuery.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\SQLWindowPanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\SQLWindowPanel.resx"
+                    DependentUpon = "SQLWindowPanel.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "classes\StringTokenizer.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\Table.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\TablePanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\TablePanel.resx"
+                    DependentUpon = "TablePanel.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "classes\Trigger.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\User.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\UserPanel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\UserPanel.resx"
+                    DependentUpon = "UserPanel.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "classes\ValidDatabasesInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "classes\View.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\AboutForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\AboutForm.resx"
+                    DependentUpon = "AboutForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\ConnectionHistoryForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\ConnectionHistoryForm.resx"
+                    DependentUpon = "ConnectionHistoryForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\DBManagerMainForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\DBManagerMainForm.resx"
+                    DependentUpon = "DBManagerMainForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\EditorForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\EditorForm.resx"
+                    DependentUpon = "EditorForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\FindForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\FindForm.resx"
+                    DependentUpon = "FindForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\Form1.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\Form1.resx"
+                    DependentUpon = "Form1.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\Form2.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\Form2.resx"
+                    DependentUpon = "Form2.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\frmAutoConn.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\frmAutoConn.resx"
+                    DependentUpon = "frmAutoConn.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\frmNewConn.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\frmNewConn.resx"
+                    DependentUpon = "frmNewConn.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\frmTables.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\frmTables.resx"
+                    DependentUpon = "frmTables.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\ObjectNamePrompt.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\ObjectNamePrompt.resx"
+                    DependentUpon = "ObjectNamePrompt.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\PasswordPrompt.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\PasswordPrompt.resx"
+                    DependentUpon = "PasswordPrompt.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\SchemaNamePrompt.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\SchemaNamePrompt.resx"
+                    DependentUpon = "SchemaNamePrompt.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\SqlnetForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\SqlnetForm.resx"
+                    DependentUpon = "SqlnetForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\SQLPanelKeLiye.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\SQLPanelKeLiye.resx"
+                    DependentUpon = "SQLPanelKeLiye.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "forms\TnsoraForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "forms\TnsoraForm.resx"
+                    DependentUpon = "TnsoraForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

@@ -86,7 +86,7 @@ namespace DBManager.classes
 		public Icon getIcon(string imageName)
 		{
 			//string iconsPath  = "E:\\UserData\\Yogesh-d0331092\\1.DB Manager\\current-DBManager\\icons\\";
-			string iconsPath  = "D:\\MY HDD\\1. Yogesh\\1. My Projects\\Latest-DBManager\\21-current-DBManager\\icons\\";
+			string iconsPath  = "E:\\Yogesh\\21-current-DBManager\\icons\\";
 			string iconName = "";
 			switch (imageName)
 			{
