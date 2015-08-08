@@ -1,8 +1,9 @@
 CREATE OR REPLACE PROCEDURE pr_promote_students
 				       (a_n_courseid IN NUMBER,
 					   a_s_period IN VARCHAR,
-					   a_s_division IN varchar,
-					   a_n_total OUT NUMBER
+					   a_s_division IN varchar
+					--a_n_total OUT NUMBER,	
+					   
 			)AS
 			
 		l_n_passing_marks number(3);
@@ -13,7 +14,7 @@ CREATE OR REPLACE PROCEDURE pr_promote_students
 
 
 BEGIN
-	 a_n_total := 0;
+	-- a_n_total := 0;
 	 FOR student_ids_cur IN (SELECT student_id FROM cas_student
 	 	 			 	 WHERE course_id = a_n_courseid AND
 						 	   current_period = a_s_period AND
@@ -40,6 +41,9 @@ BEGIN
 				   DBMS_OUTPUT.put_line(l_n_passing_marks);
 				   flag := false;
 				   passed := false;
+				   DELETE FROM cas_student_payments 
+				   WHERE student_id = student_ids_cur.student_id
+				   AND fee_type = 'EX';
 				else
 				   passed := true;		
 				end if;
@@ -55,7 +59,7 @@ BEGIN
 
 		   UPDATE cas_student SET current_period = l_s_temp
 		   WHERE student_id = student_ids_cur.student_id;
-		   a_n_total := a_n_total + 1;
+		  -- a_n_total := a_n_total + 1;
 		end if;
 
 	END LOOP;
