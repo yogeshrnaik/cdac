@@ -1,0 +1,53 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f16\froman\fcharset238\fprq2 Times New Roman CE;}{\f17\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f19\froman\fcharset161\fprq2 Times New Roman Greek;}{\f20\froman\fcharset162\fprq2 Times New Roman Tur;}
+{\f21\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f22\fswiss\fcharset238\fprq2 Arial CE;}{\f23\fswiss\fcharset204\fprq2 Arial Cyr;}{\f25\fswiss\fcharset161\fprq2 Arial Greek;}{\f26\fswiss\fcharset162\fprq2 Arial Tur;}
+{\f27\fswiss\fcharset186\fprq2 Arial Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;
+\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\nowidctlpar\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}{\*\cs10 
+\additive Default Paragraph Font;}}{\info{\title Our HTTP Proxy Server's flow -}{\author Yogesh R. Naik}{\operator Yogesh R. Naik}{\creatim\yr2003\mo11\dy6\hr22\min43}{\revtim\yr2003\mo11\dy6\hr22\min43}{\version2}{\edmins0}{\nofpages2}{\nofwords594}
+{\nofchars3390}{\*\company ABC}{\nofcharsws4163}{\vern71}}\widowctrl\ftnbj\aenddoc\hyphcaps0\viewkind4\viewscale100 \fet0\sectd \linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2
+\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}\pard\plain \nowidctlpar\adjustright \fs20\cgrid {\b\f1\fs24\cgrid0 Our HTTP Proxy Server's flow -
+\par }{\f1\fs24\cgrid0 
+\par 1) ProxyServer accepts request from browser - serverSocket.accept() returns Socket object through which we can communicate with the browser
+\par 2) ProxyServer creates an object of ProxyChild and pass the socket's object.
+\par 3) In the constructor of ProxyChild class, a new thread is spawned to handle the request.
+\par 4) In the thread, (run() method) an object of HttpRequestHandler class is created to handle the request. 
+\par The }{\b\f1\fs24\cgrid0 handleRequest(Socket browser, browser.getInputStream())}{\f1\fs24\cgrid0  
+is called on the newly created object of the HttpRequestHandler. The socket (used to communicate with the browser) and its input stream (to read the request from the browser) is passed to the method.
+\par 5) In the handleRequest method, we create an object of HttpParser for parsing the request. We call }{\b\f1\fs24\cgrid0 parseRequest(InputStream)}{\f1\fs24\cgrid0  method of the HttpParser and pass the socket's input stream. 
+\par 6) In this mehtod (parseRequest), 
+\par \tab a) we read the raw request (in bytes) from the input stream
+\par \tab b) convert the raw request to string
+\par \tab c) we separate the request line and headers from the request string.
+\par \tab d) create object of RequestLine and HttpHeader class
+\par \tab e) create an object of HttpRequest - pass the objects of RequestLine and HttpHeader class to its constructor
+\par \tab f) finally return the this newly created object of HttpRequest to the caller (return from parseRequest())
+\par 7) So, now we come back to handleRequest method with the HttpRequest object.
+\par 8) Here, now we check whether the requested url is in the cache or not. (we have a reference to object of CacheManager in HttpRequestHandler)
+\par \tab a) if yes then (i.e. isPresentInCache(Url) returns true), we send the page to the client. i.e. we write the contents of the page to the \tab OutputStream of the client's (i.e. the browser) socket.
+\par \tab b) if not, then we call the }{\b\f1\fs24\cgrid0 getFromOriginServer(Socket, HttpRequest)}{\f1\fs24\cgrid0  method of the HttpRequestHandler. we pass the browser's \tab 
+socket and the HttpRequest object that we have created out of the request from client (i.e. browser)
+\par 9) In the getFromOriginServer() method, we do
+\par \tab a) create an object of HttpParser to parse the response received from origin server
+\par \tab b) get the raw (in bytes) http request from the object of HttpRequest (received as 2nd para in method)
+\par \tab c) get the url to be fetched (using httpReq.getRLine()).getUrl() method) and then we get the host name using url.getHost() method
+\par \tab d) we create a socket with the host name and port 80 to contact the origin server
+\par \tab e) we send the request to the origin server - i.e. we write the raw request on the OutputStream of the newly created Socket.
+\par \tab f) we get the InputStream of this newly created Socket to read the response from the origin server
+\par \tab g) we call the method }{\b\f1\fs24\cgrid0 parseResponse(Socket, InputStream)}{\f1\fs24\cgrid0  to parse the response. we pass the browser's socket and InputStream of \tab 
+newly created socket (socket to contact origin server). This method returns an object of HttpResponse to the caller.
+\par 10) In the parseResponse() method,
+\par \tab a) we get the OutputStream of the browser's socket (to write the repsponse as soon as we get it from origin server, so that the client will \tab see the loading of the page)
+\par \tab b) we create a BufferedInputStream from the InputStream of the socket (2nd parameter received in the method - used to receive \tab response from origin server)
+\par \tab c) then in a while loop, we read the response and write it to the client's socket.
+\par \tab d) after completly reading the response, we convert it to string
+\par \tab e) we separate the response status line and response headers from the response body
+\par \tab f) we then tokenize the staus line and headers (use methods parseStatusLine(String) and parseHeader(String)). these methods return the \tab object of StatusLine and HttpHeader respectively
+\par \tab g) we create an object of HttpResponse. we pass the object of StatusLine and HttpHeader to the constructor.
+\par \tab h) then we return this object to the caller.
+\par 11) we return in handleRequest with the object of HttpResponse. we add this to cache. then this method returns the same object of HttpResponse to the caller (i.e. the ProxyChild's run() method.) and thus the thread completes its execution.
+\par 
+\par 
+\par }{\b\f1\fs24\cgrid0 
+\par }}

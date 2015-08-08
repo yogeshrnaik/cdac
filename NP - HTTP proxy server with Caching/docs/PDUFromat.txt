@@ -1,0 +1,78 @@
+PDU FORMAT:
+
+Since the protocol used for communication is HTTP, the PDU's involved will be HttpRequest and HttpResponse.
+
+1) Http Request:
+   -------------
+
+The clients send a request to the proxy which sends its own request to the origin server. The request may be to get information about the page using "HEAD" method or request to "GET" a page or "POST" a page.
+The format of the HttpRequest is as follows:
+
+Request = Request Line + HttpHeader + Entity-Body.
+
+1.1) Request Line:
+     -------------
+	This will have the folowing format:
+
+	"Label: "+label-value 
+
+	Request Line = "Method: " + value + " " + "Request-URL: " + value + " " +"HTTP-Version: " + value + "\r\n"
+
+1.1.1) Method: may be "GET" , "HEAD" , "POST"
+       -------
+
+2) HttpResponse:
+   -------------
+
+HttpResponse is received by the proxy server for the request.The Proxy responds back to the client either after processing the response received or creating its own HttpResponse if the request page is present in the cache.
+
+The format of HttpResponse is as follows:
+
+Response = Status-Line + HttpHeader + Entity-Body
+
+
+2.1) Status-Line:
+     -----------
+
+	This will have the folowing format:
+
+	"Label: "+label-value 
+
+	Request Line = "HTTP-Version: " + value + "Status-Code: " + value + " " + "Reason-Phrase: " + value + "\r\n"
+
+	
+
+
+1.2 & 2.2) 
+
+HttpHeader:
+-----------
+
+This will have the folowing format:
+
+"Label: "+ label-value + "\r\n"
+
+
+Labels will be included in the following sequence along with values:
+-------------------------------------------------------------------
+
+Authorization
+If-Modified-Since
+User-Agent
+Date
+Pragma
+Content-Length
+Content-Type
+Expires
+Location
+WWW-Authenticate
+
+
+1.3 & 2.3)
+
+Entity-Body:
+------------
+
+The body will be a byte array which will be included in the HttpRequest and HttpResponse. It may be empty ie. length of the array can be 0.
+
+
