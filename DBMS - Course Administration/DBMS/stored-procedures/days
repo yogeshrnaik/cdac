@@ -1,0 +1,6 @@
+if (day = 'MONDAY' , '1 - MONDAY' ,
+  if(  day = 'TUESDAY', '2 - TUESDAY',
+    if( day = 'WEDNESDAY' , '3 - WEDNESDAY' , 
+          if(  day = 'THURSDAY', '4 - THURSDAY', 
+               if( day = 'FRIDAY', '5 - FRIDAY', 
+                     if( day = 'SATURDAY', '6 - SATURDAY', day ) )) ) ) )

@@ -1,0 +1,67 @@
+CREATE OR REPLACE PROCEDURE pr_promote_students
+				       (a_n_courseid IN NUMBER,
+					   a_s_period IN VARCHAR,
+					   a_s_division IN varchar,
+					   a_n_total OUT NUMBER
+			)AS
+			
+		l_n_passing_marks number(3);
+		l_s_temp varchar(10);
+		l_n_number number(2);
+		flag boolean;
+		passed boolean;
+
+
+BEGIN
+	 a_n_total := 0;
+	 FOR student_ids_cur IN (SELECT student_id FROM cas_student
+	 	 			 	 WHERE course_id = a_n_courseid AND
+						 	   current_period = a_s_period AND
+							   division = a_s_division)
+
+	 LOOP
+		flag := true;
+		passed := false;
+		FOR student_marks_cur IN (SELECT subject_id,exam_type,marks_scored
+						  	  FROM cas_student_performance
+							  WHERE student_id = student_ids_cur.student_id AND
+							  		period = a_s_period)
+
+		LOOP
+			if (flag) then			
+				SELECT passing_marks INTO l_n_passing_marks
+				FROM cas_subject_assessment
+				WHERE subject_id = student_marks_cur.subject_id AND
+					  exam_type = student_marks_cur.exam_type;
+					  
+			    		
+				if (student_marks_cur.marks_scored < l_n_passing_marks) then
+				   DBMS_OUTPUT.put_line(student_marks_cur.marks_scored);
+				   DBMS_OUTPUT.put_line(l_n_passing_marks);
+				   flag := false;
+				   passed := false;
+				else
+				   passed := true;		
+				end if;
+			end if;
+		END LOOP;
+
+		if (passed) then
+		   l_s_temp := substr(a_s_period,1,4);
+		   l_s_temp := trim(l_s_temp);
+		   l_n_number := to_number(trim(substr(a_s_period,5,2))) ;
+		   l_n_number := l_n_number + 1;
+		   l_s_temp := l_s_temp || ' ' || to_char(l_n_number);
+
+		   UPDATE cas_student SET current_period = l_s_temp
+		   WHERE student_id = student_ids_cur.student_id;
+		   a_n_total := a_n_total + 1;
+		end if;
+
+	END LOOP;
+
+
+
+END;
+/
+
