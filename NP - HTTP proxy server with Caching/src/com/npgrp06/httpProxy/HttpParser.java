@@ -19,7 +19,7 @@ public class HttpParser
 	HttpResponse httpresponse;
 	DateFormatter dateFormatter;
 //	BandwidthProperties.loadProperties();
-// create httprequest out of the input stream received fron the client.
+// create httprequest out of the input stream received from the client.
 
 HttpParser()
 {
