@@ -1,0 +1,42 @@
+Company Hierarchy
+Consider a company having a CEO, the head of the company. The CEO can have many
+employees directly reporting to him and each of these employees can have other employees
+reporting to them and so on. This organization of employees in the company gives rise to a
+hierarchical structure of employees representing boss-subordinate relationship between
+employees. Each employee in the Company has unique id(maximum 25 characters). The
+company will always have one CEO identified by an id, "CEO".
+Hierarchy of the organization will be the input to your program, you will have to find immediate
+common boss of any two different employees of the company. Immediate common boss of
+the two employees is an employee deepest in the hierarchy, to whom these two employees
+report either directly or indirectly (a common ancestor of both the employees).
+Input Specification
+Input will consist of several lines specifying the boss subordinate relationships between the
+employees terminating with string “END”. Each of the lines will be of the following format.
+Each field is separated by a blank space.
+<emp-id> <N> <emp-id1> <emp-id2> .. <emp-idN>
+where,
+<emp-id> : employee id of boss
+<N> : number of subordinates directly reporting to emp-id
+<emp-id1> ... <emp-idN> : employee ids of N subordinates
+The last line will consist of two employee ids, E1 and E2, separated by a blank space.
+Assume that an employee id will appear as a subordinate before it appears as a boss in the
+input. Also assume that E1 will not be an ancestor of E2 and vice verse.
+Output Specification
+The output should consist of employee id of the immediate common boss of both E1 and E2.
+Terminate the output with a new line character.
+Sample Input
+CEO 3 rakesh naresh paresh
+rakesh 2 ram shyam
+naresh 4 suresh bhavika nayana nirav
+suresh 1 manish
+bhavika 1 sonam
+nirav 2 rohan sohan
+nayana 2 punam purvi
+punam 2 urvi tulsi
+rohan 1 rohit
+ram 1 luv
+shyam 1 kush
+END
+tulsi rohit
+Sample Output
+naresh

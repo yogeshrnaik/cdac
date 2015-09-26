@@ -1,0 +1,48 @@
+Component Hierarchy
+Consider a Classification system of Components. The system has one top-level component,
+which gets further specialized into other components (at-most 2) and these components get
+further specialized and so on. Hence such relationship between components gives rise to the
+hierarchical structure of components. Each component will be uniquely named (maximum 25
+character).
+Given the specification of the components as component name, number of component into
+which it get specialized and name of specialized component, you have to write a program to
+build the classification system of the components and find:
+1) The similarity between any two different components, C1 and C2: The Similarity between
+any two components is the absolute difference between the level of C1 and C2 in the
+Component hierarchy with respect to the immediate common component of both C1 and
+C2. The immediate common component of C1 and C2 is a Component deepest in the
+hierarchy, which is ancestor of both C1 and C2
+2) Pre-order traversal of hierarchy rooted at common immediate component of C1 and C2.
+Input Specification
+Input will consist of several lines, each specifying a component and its specialized
+components, terminating with the string END. Each of the lines will be of the following format.
+Each field is separated by a blank space. The first line of the input will contain the
+specification about the top-level component.
+<comp-name> <N> <sp-comp-name1> <sp-comp-name2> ... <sp-comp-nameN>
+where,
+<comp-name> : Component name.
+<N> : Number of specialized component of <comp-name>
+<sp-comp-name1> ... <sp-comp-nameN> : Specialized N component names of <compname>
+The last line will consists of two component names, C1 and C2, separated by a blank space.
+Assume that a component will always be specified as a specialized component of some other
+component before specifying its specialized components except the top-level component. You
+can also assume that C1 will not be an ancestor of C2 and vice verse.
+Note that while constructing the hierarchy, first component (<sp-comp-name1>) should go to
+the left of the component (<comp-name>).
+Output Specification
+The first line of the output should consist of the similarity between two components, C1 and
+C2. The second line of the output consists of name of the components obtained by per-order
+traversal of hierarchy rooted at common immediate component of C1 and C2. The component
+names should be separated by a blank space.
+Sample Input
+Computer 2 Del IBM /* Computer is top-level component */
+Del 2 Del1 Del2
+Del1 1 Del3
+IBM 1 IBM2
+IBM2 2 IBM3 IBM4
+END
+Del3 IBM4
+Sample Output
+0 /* Immediate common component of Del3 and IBM4 is Computer */
+Computer Del Del1 Del3 Del2 IBM IBM2 IBM3 IBM4
+Note: "/* some text */" is for the explanation and note part of Sample input/ Sample output.

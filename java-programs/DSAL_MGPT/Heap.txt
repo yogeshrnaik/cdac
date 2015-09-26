@@ -1,0 +1,28 @@
+Heap
+You have to write a program to compare POST ORDER traversal of a MAX HEAP with PRE
+ORDER traversal of a MIN HEAP. Given two sequences of integers, construct MAX HEAP
+from the first sequence and MIN HEAP from the second sequence. After performing the
+specified number of deletions on the heaps, compare the POST ORDER traversal of MAX
+HEAP and PRE ORDER traversal of the MIN HEAP. If these traversals produce same
+sequence of integers, print YES. Print NO otherwise.
+Input Specification
+Input will contain two lines, first for MAX HEAP and second for MIN HEAP. Each line will start
+with a positive integer N followed by N+1 integers. The first integer, N, is the number of
+integers to be inserted in to the heap. The following N integers (all unique) are to be inserted
+into the corresponding heap. The last integer, D (0 <= D <N), specifies the number of
+deletions to be performed on the corresponding heap.
+You can assume that the maximum number of elements in each heap is 50.
+Output Specification
+The output will be in three lines. The first two lines of output should print the POST ORDER
+and PRE ORDER traversals, obtained after all deletion operations are performed on MAX
+HEAP and MIN HEAP, respectively. Integers in each traversal should be separated by a
+blank space. The last line should print YES if both the above traversals produce same
+sequence of integers. Print NO otherwise. Terminate each output line with a new line
+character.
+Sample Input
+5 5 3 7 6 4 1
+4 3 4 6 5 0
+Sample output
+3 4 5 6
+3 4 5 6
+YES
