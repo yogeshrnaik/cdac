@@ -1,0 +1,30 @@
+                                            AmeyaMGPT13.java
+                                            Art.java
+BULLS_~1 JAV         2,501  10-10-02 12:02p Bulls_Cows_New.java
+BULLS_~2 JAV         2,734  10-10-02 11:50a Bulls_Cows.java
+CHPERM~1 JAV         1,572  11-23-02 12:28a ChPermute.java
+COMBIN~1 JAV         1,328  11-23-02 12:25a Combination.java
+CONNEC~1 JAV         3,352  08-16-02 12:08p ConnectFour.java
+CROSSB~1 JAV         1,280  08-14-02 10:40p CrossBridge.java
+DROP_G~1 JAV         2,506  08-14-02  8:24p Drop_Gather.java
+DSALTR~1 JAV         1,117  12-26-02  9:55a DsalTrial.java
+EQUATI~1 JAV         3,072  11-22-02 11:43p EquationCreator.java
+FLOWPR~1 JAV         7,578  01-20-03  9:37a FlowProblem.java
+GOLDHU~1 JAV         2,613  08-14-02  1:17p GoldHunt.java
+INSECT~1 JAV         2,437  08-17-02  1:49a Insect.java
+MAGICS~1 JAV         1,407  10-08-02  9:05p MagicSquare.java
+NSTRIN~1 JAV         1,595  08-03-02  9:40a Nstring.java
+PAIRIN~1 JAV         3,614  09-03-02  9:04p Pairing.java
+PERMUT~1 JAV         1,427  11-23-02 12:21a Permutation.java
+
+ROHITM~1 JAV         1,001  09-18-02  9:33a RohitMGPT13.java
+SAMPLE~1 JAV         1,280  09-09-02 10:49a SampleGeneration.java
+SHORTE~1 JAV         3,890  01-16-03 10:37a ShortestPath.java
+SQUARE~1 JAV           674  01-09-03 11:09a SquareRoot.java
+STAMPC~1 JAV         1,637  11-22-02 11:49p StampChamp_Old.java
+STAMPC~2 JAV         1,642  10-05-02  7:09p StampChamp.java
+STAMPC~3 JAV         2,135  11-23-02 12:07a StampChamp_New.java
+TEMP1~1  JAV           303  08-16-02 11:34a Temp1.java
+TEST~1   JAV           411  01-20-03 11:20a test.java
+WORDCH~1 JAV         1,511  08-16-02 12:06p WordChain.java
+WORDY~1  JAV         3,774  08-16-02  5:35p wordy.java
