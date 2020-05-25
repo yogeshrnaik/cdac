@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0071)http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/problist.shtml?id=21 -->
+<?xml version="1.0" encoding="UTF-8"?><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>OOPJ : MGPT</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type><LINK 
+href="22. Reversi Game_files/oopj.css" rel=stylesheet type=text/css><LINK 
+href="22. Reversi Game_files/list.css" rel=stylesheet type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY>
+<TABLE border=0 cellPadding=0 cellSpacing=0 id=top>
+  <TBODY>
+  <TR>
+    <TD width=163><A href="http://www.ncst.ernet.in/"><IMG alt="[NCST Logo]" 
+      border=0 height=60 src="22. Reversi Game_files/g_ncstlogo.gif" 
+      width=60></A></TD>
+    <TD noWrap>
+      <H1>Object Oriented Programming using Java</H1></TD></TR></TBODY></TABLE><A 
+name=topofpage></A>
+<TABLE align=left border=0 cellPadding=0 cellSpacing=0 width="95%">
+  <TBODY>
+  <TR vAlign=top><!-- Start of Left Menu -->
+    <TD align=left class=gradient><IMG alt="" border=0 height=1 
+      src="22. Reversi Game_files/blank.gif" width=165><BR>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD class=leftmenu width=15><IMG alt="" height=1 
+            src="22. Reversi Game_files/blank.gif" width=15></TD>
+          <TD class=leftmenu width=133>
+            <P class=leftmenu><SPAN class=menuhead>OOPJ-2002 </SPAN><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/index.shtml">Home</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/announce.shtml">Announcements</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/slides/">Schedule</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/assessment/">Assessment</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/resources/">Resources</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/references.shtml">References</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/resources/links.shtml">Links</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/faq.shtml">FAQ</A><BR><BR><A 
+            href="http://saathi.ncst.ernet.in/~pgdst/discus/messages/2/2.html?1018987125" 
+            target=_blank>Discussion Board</A><BR><BR><A 
+            href="http://www.ncst.ernet.in./~oopjfac/contact.shtml">Faculty 
+            Contact</A><BR><BR></P></TD>
+          <TD class=leftmenu width=20><IMG alt="" height=1 
+            src="C:\My Documents\Ncst\OOPJ\MGPT Problems\22. Reversi Game_files\blank(1).gif" 
+            width=17></TD></TR></TBODY></TABLE></TD><!-- End of menu -->
+    <TD class=content width="95%"><!-- Start of content -->
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/problist.shtml?id=20">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/problist.shtml?id=22">next</A></TD></TR></TBODY></TABLE>
+      <H2>MGPT Problem 22</H2>
+      <H3>Reversi Game</H3>
+      <P>The problem is to simulate a game of Reversi. Reversi is a game played 
+      on a board of size 8x8. Two players Black and White play this game. The 
+      rows of the board are numbered from 1 to 8 and the columns are labelled a 
+      to h. At the beginning of the game, the initial configuration consists of 
+      two black discs placed on e4 and d5 and two white discs on d4 and e5. (See 
+      figure). </P>
+      <TABLE align=center cellPadding=10 cellSpacing=5>
+        <TBODY>
+        <TR>
+          <TD><IMG alt=reversi1 border=0 height=200 
+            src="22. Reversi Game_files/reversi1.png" width=200></TD>
+          <TD><IMG alt=reversi2 border=0 height=210 
+            src="22. Reversi Game_files/reversi2.png" width=220></TD>
+          <TD><IMG alt=reversi3 border=0 height=140 
+            src="22. Reversi Game_files/reversi3.png" 
+      width=160></TD></TR></TBODY></TABLE>
+      <P>Black makes the first move and the two players subsequently take turns 
+      making their moves. The two players play the game by placing black and 
+      white discs alternately on empty cells of the board. Each placing of the 
+      disc is referred to by a code, comprising a character and a digit denoting 
+      the column and row of a cell on the board, e.g. d3. A player can choose to 
+      skip a turn. In that case the move is indicated by "--". </P>
+      <P>The crux of the game lies in flanking opponent's discs. Flanking is 
+      achieved by entrapping discs of the opponent's colour in between the 
+      currently placed disc and a previously placed self-owned disc. All these 
+      discs must be in a straight line, vertically, horizontally or diagonally 
+      in any orientation. The opponent's discs so trapped, change colour to the 
+      player's own colour. This is illustrated in the figure. </P>
+      <P>Flanking is not cascaded. That is, when a white disc is flanked and 
+      changes colour to black, it does not trigger the flanking of other white 
+      discs. A chain of mixed discs or gaps is not considered as a flank. </P>
+      <P>To be precise, a flank is defined as a sequence of discs having 
+      following properties: 
+      <OL>
+        <LI>All the discs in the flank must be in a straight line (vertical, 
+        horizontal, or diagonal). 
+        <LI>There must be at least three discs in the flank. 
+        <LI>The flank must not have any gaps in it. 
+        <LI>The ends of the flank must be of the same colour, say C. 
+        <LI>All the discs in the flank, except its end-discs, must be of a 
+        different colour than C. 
+        <LI>One of the ends of the flank must be the disc placed in the current 
+        move. </LI></OL>
+      <P></P>
+      <P>You are given a sequence of valid moves as input. You have to write a 
+      program to simulate the moves and then output the winner. The winner is 
+      the player having maximum number of discs on the board. If there is no 
+      clear winner, then the game ends in a draw. </P>
+      <H3>Input specification:</H3>
+      <UL>
+        <LI>First line has an integer M, which denotes the number of moves. 
+        <LI>Next M lines each have a code corresponding to a player's moves. The 
+        code either consists of an alphabet (a to h) and a digit (1 to 8) or 
+        consists of two hyphens '--' indicating skip of the turn. </LI></UL>
+      <H3>Output specification:</H3>
+      <P>The output is the winner of the simulation i.e. '<B>BLACK</B>' or 
+      '<B>WHITE</B>' and the margin by which the player has won or output 
+      '<B>DRAW</B>'.</P><BR><BR>
+      <H3>Sample Input and Output:</H3><PRE><P>
+<B>Input:</B>
+6
+f5
+f6
+c4
+g5
+g7
+e7
+
+<B>Output:</B>
+BLACK 2
+
+<B>Input:</B>
+5
+f5
+d6
+--
+f3
+c5
+
+<B>Output:</B>
+DRAW
+
+</P>
+</PRE>
+      <P><A 
+      href="http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/testcase.shtml?id=21">Test 
+      Cases</A> for the problem.</P>
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/problist.shtml?id=20">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in./~oopjfac/assessment/mgpt/problist.shtml?id=22">next</A></TD></TR></TBODY></TABLE><!-- End of content --><BR><BR>
+      <HR align=center SIZE=1 width="70%">
+      <BR><BR>
+      <DIV class=footermenu><A class=footermenu 
+      href="http://www.ncst.ernet.in/index.shtml" target=_blank 
+      title="NCST Homepage">NCST Homepage</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in/contactus" target=_blank 
+      title="Contact NCST">Contact NCST</A> </DIV>
+      <DIV class=footerlinks>© 2002 National Centre for Software 
+      Technology.<BR><A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/disclaimer.shtml" target=_blank 
+      title=Disclaimer>Disclaimer</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/termsofuse.shtml" target=_blank 
+      title="Terms of Use">Terms of Use</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/privacypolicy.shtml" target=_blank 
+      title="Privacy Policy">Privacy Policy</A> </DIV>
+      <DIV class=pagefooter>Last Updated: Thursday, January 23, 2003 <BR>This 
+      site is best viewed at 800x600 resolution 
+  </DIV></TD><!-- End of content --></TR></TBODY></TABLE></BODY></HTML>

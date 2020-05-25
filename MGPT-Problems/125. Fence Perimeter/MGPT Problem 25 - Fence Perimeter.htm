@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0085)http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=24 -->
+<?xml version="1.0" encoding="UTF-8"?><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>OOPJ : MGPT</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="MGPT Problem 25 - Fence Perimeter_files/oopj.css" type=text/css 
+rel=stylesheet><LINK href="MGPT Problem 25 - Fence Perimeter_files/list.css" 
+type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<TABLE id=top cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD width=163><A href="http://www.ncst.ernet.in/"><IMG height=60 
+      alt="[NCST Logo]" 
+      src="MGPT Problem 25 - Fence Perimeter_files/g_ncstlogo.gif" width=60 
+      border=0></A></TD>
+    <TD noWrap>
+      <H1>Object Oriented Programming using Java</H1></TD></TR></TBODY></TABLE><A 
+name=topofpage></A>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=left border=0>
+  <TBODY>
+  <TR vAlign=top><!-- Start of Left Menu -->
+    <TD class=gradient align=left><IMG height=1 alt="" 
+      src="MGPT Problem 25 - Fence Perimeter_files/blank.gif" width=165 
+      border=0><BR>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=leftmenu width=15><IMG height=1 alt="" 
+            src="MGPT Problem 25 - Fence Perimeter_files/blank.gif" width=15></TD>
+          <TD class=leftmenu width=133>
+            <P class=leftmenu><SPAN class=menuhead>OOPJ-2003 </SPAN><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/index.shtml">Home</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/announce.shtml">Announcements</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/slides/">Schedule</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/">Assessment</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/">Resources</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/references.shtml">References</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/links.shtml">Links</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/faq.shtml">FAQ</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/applications/yabb/" 
+            target=_blank>Discussion Board</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/contact.shtml">Faculty 
+            Contact</A><BR><BR></P></TD>
+          <TD class=leftmenu width=20><IMG height=1 alt="" 
+            src="D:\Yogesh Backup\APGDST\MGPT\MGPT Problem 25 - Fence Perimeter_files\blank(1).gif" 
+            width=17></TD></TR></TBODY></TABLE></TD><!-- End of menu -->
+    <TD class=content width="95%"><!-- Start of content -->
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=23">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=25">next</A></TD></TR></TBODY></TABLE>
+      <H2>MGPT Problem 25</H2>
+      <H3>Fence Perimeter</H3>
+      <P>A building is situated in a rectangular plot of size M x N. It is 
+      decided to grow a lawn around the building and then build a fence around 
+      the lawn. </P>
+      <P>Refer to the adjoining figure. It shows the rectangular plot of 
+      dimensions 12x10. The cells occupied by the building are shown in darker 
+      shade. The boundary walls of the building are formed by the horizontal and 
+      vertical edges of the cells. The building cells will always be touching 
+      one another. That is, there will not be two (or more) unconnected 
+      buildings in the compound. There will not be any holes (that is, empty 
+      cells surrounded by the building on all sides) in a building as well. The 
+      lawn is grown in each cell, which shares an edge or a corner with 
+      building. The cells with lawn grown in them are shown with lighter shade 
+      in the figure. </P>
+      <DIV align=center><IMG height=250 alt="Fence Perimeter" src="" width=350 
+      border=0> </DIV>
+      <P>A fence is built along the edges of the cells such that it inscribes 
+      the lawn (and of course building). The fence is not built along the 
+      boundary of rectangular plot, as the compound walls are already in place. 
+      The figure shows the fence using a dashed line along the lawn cell edges. 
+      You have to write a program to calculate the perimeter of the fence. 
+      Satisfy yourself that the perimeter of the fence in the figure indeed 
+      equals 39. </P>
+      <H3>Input specification:</H3>
+      <UL>
+        <LI>The first line has two integers M and N indicating the number of 
+        rows and columns of the rectangular plot respectively. 
+        <LI>Each of the following M lines contains N characters, terminated by a 
+        newline. The character sequence consists of either '<B>#</B>' or 
+        '<B>^</B>'. A '<B>#</B>' indicates a building cell, while a '<B>^</B>' 
+        character denotes free space. </LI></UL>
+      <H3>Output specification:</H3>
+      <P>Your program should print the length of the perimeter. </P><BR><BR>
+      <H3>Sample Input and Output:</H3><PRE><P>
+<B>Input:</B>
+12 10
+^^^^^^^^^^
+^^^^^^#^^^
+^^^^####^^
+^^^^####^^
+^^####^^^^
+^^####^^^^
+^^^^##^^^^
+^^^^####^^
+^^####^^^^
+^^######^^
+^^^^^^^^^^
+^^^^^^^^^^
+
+<B>Output:</B>
+39
+
+
+<B>Input:</B>
+12 10
+^^^^^^^^^^
+^^#####^^^
+^^###^^^^^
+^^#####^^^
+^^##^^^^^^
+^^##^^^^^^
+^^#####^^^
+^^##^^^^^^
+^^##^^^^^^
+^^##^^^^^^
+^^#####^^^
+^^^^^^^^^^
+
+<B>Output:</B>
+30
+
+</P>
+</PRE>
+      <P><A 
+      href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/testcase.shtml?id=24">Test 
+      Cases</A> for the problem.</P>
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=23">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=25">next</A></TD></TR></TBODY></TABLE><!-- End of content --><BR><BR>
+      <HR align=center width="70%" SIZE=1>
+      <BR><BR>
+      <DIV class=footermenu><A class=footermenu title="NCST Homepage" 
+      href="http://www.ncst.ernet.in/index.shtml" target=_blank>NCST 
+      Homepage</A> | <A class=footermenu title="Contact NCST" 
+      href="http://www.ncst.ernet.in/contactus" target=_blank>Contact NCST</A> 
+      </DIV>
+      <DIV class=footerlinks>© 2003 National Centre for Software 
+      Technology.<BR><A class=footermenu title=Disclaimer 
+      href="http://www.ncst.ernet.in/./legal/disclaimer.shtml" 
+      target=_blank>Disclaimer</A> | <A class=footermenu title="Terms of Use" 
+      href="http://www.ncst.ernet.in/./legal/termsofuse.shtml" 
+      target=_blank>Terms of Use</A> | <A class=footermenu 
+      title="Privacy Policy" 
+      href="http://www.ncst.ernet.in/./legal/privacypolicy.shtml" 
+      target=_blank>Privacy Policy</A> </DIV>
+      <DIV class=pagefooter>Last Updated: Thursday, July 10, 2003 <BR>This site 
+      is best viewed at 800x600 resolution 
+  </DIV></TD><!-- End of content --></TR></TBODY></TABLE></BODY></HTML>

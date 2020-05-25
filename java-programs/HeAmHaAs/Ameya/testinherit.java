@@ -1,4 +1,5 @@
 import ncst.pgdst.*;
+
 class A
 {
         int a ;
@@ -17,8 +18,8 @@ class B extends A
 
 class testinherit extends B
 {
-	public static void main(String [] args)
-	{
+public static void main(String [] args)
+{
         A a = new A();
         A a1 = new B(1);
         B b = new B();
@@ -38,5 +39,5 @@ class testinherit extends B
         ((B)a1).show(1);
         b1.show(0);
 
-      }
-}
+        }
+        }

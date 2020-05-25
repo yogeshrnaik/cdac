@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0085)http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=25 -->
+<?xml version="1.0" encoding="UTF-8"?><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>OOPJ : MGPT</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="MGPT Problem 26 - DFA Simulator_files/oopj.css" type=text/css 
+rel=stylesheet><LINK href="MGPT Problem 26 - DFA Simulator_files/list.css" 
+type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<TABLE id=top cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD width=163><A href="http://www.ncst.ernet.in/"><IMG height=60 
+      alt="[NCST Logo]" 
+      src="MGPT Problem 26 - DFA Simulator_files/g_ncstlogo.gif" width=60 
+      border=0></A></TD>
+    <TD noWrap>
+      <H1>Object Oriented Programming using Java</H1></TD></TR></TBODY></TABLE><A 
+name=topofpage></A>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=left border=0>
+  <TBODY>
+  <TR vAlign=top><!-- Start of Left Menu -->
+    <TD class=gradient align=left><IMG height=1 alt="" 
+      src="MGPT Problem 26 - DFA Simulator_files/blank.gif" width=165 
+      border=0><BR>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=leftmenu width=15><IMG height=1 alt="" 
+            src="MGPT Problem 26 - DFA Simulator_files/blank.gif" width=15></TD>
+          <TD class=leftmenu width=133>
+            <P class=leftmenu><SPAN class=menuhead>OOPJ-2003 </SPAN><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/index.shtml">Home</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/announce.shtml">Announcements</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/slides/">Schedule</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/">Assessment</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/">Resources</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/references.shtml">References</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/links.shtml">Links</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/faq.shtml">FAQ</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/applications/yabb/" 
+            target=_blank>Discussion Board</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/contact.shtml">Faculty 
+            Contact</A><BR><BR></P></TD>
+          <TD class=leftmenu width=20><IMG height=1 alt="" 
+            src="D:\Yogesh Backup\APGDST\MGPT\MGPT Problem 26 - DFA Simulator_files\blank(1).gif" 
+            width=17></TD></TR></TBODY></TABLE></TD><!-- End of menu -->
+    <TD class=content width="95%"><!-- Start of content -->
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=24">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD></TR></TBODY></TABLE>
+      <H2>MGPT Problem 26</H2>
+      <H3>DFA Simulator</H3>
+      <P>Deterministic finite automatons (DFA) are simplified models of 
+      computers with extremely small memory. Such computers are at the heart of 
+      various electro-mechanical devices, such as automatic doors, washing 
+      machines, elevators, etc. </P>
+      <P>The formal definition of a DFA includes four components: Q, A, T, F 
+</P>
+      <OL>
+        <LI>Q is a set of states of the DFA 
+        <LI>A is the alphabet of the DFA. 
+        <LI>T is a transition function, which given a state q from Q and a 
+        letter of the alphabet, say x, from A, returns a new state from Q. Thus 
+        New State = T(q, x). 
+        <LI>F, a subset of Q, indicates the final states of the DFA. </LI></OL>
+      <P>As an example, consider a DFA: D defined as below: </P>
+      <OL>
+        <LI>Q = { q1, q2, q3 } 
+        <LI>A = { a, b } 
+        <LI>T is the transition function given by the following matrix 
+        <TABLE>
+          <TBODY>
+          <TR>
+            <TD>
+              <TABLE cellSpacing=0 cellPadding=5 border=1>
+                <TBODY>
+                <TR>
+                  <TD></TD>
+                  <TD>a</TD>
+                  <TD>b</TD></TR>
+                <TR>
+                  <TD>q1</TD>
+                  <TD>q1</TD>
+                  <TD>q2</TD></TR>
+                <TR>
+                  <TD>q2</TD>
+                  <TD>q3</TD>
+                  <TD>q2</TD></TR>
+                <TR>
+                  <TD>q3</TD>
+                  <TD>q2</TD>
+                  <TD>q2</TD></TR></TBODY></TABLE></TD>
+            <TD><IMG height=100 alt=DFA src="" width=200 border=0> 
+          </TD></TR></TBODY></TABLE>
+        <LI>F = { q2 } </LI></OL>
+      <P>The DFA described above can be visualized as a state transition diagram 
+      (as given in the figure). </P>
+      <P>To simulate a DFA, you need an input string. This string is composed of 
+      the letters from the alphabet, i.e., the set of letters given in A. The 
+      DFA's initial state is always q1. It scans the input string, left to 
+      right, one letter at a time. Depending on its current state and the letter 
+      it has just read, the DFA uses its Transition Function to determine its 
+      next state. Thus, in the example given above, if the DFA, starting off in 
+      q1, reads 'b' as its input string, it will check its Transition Function 
+      to determine that the next state is q2. This goes on till the input string 
+      is exhausted. At the end, if the state of the DFA is a state that is 
+      present in F, then the string is <B>accepted</B>, else the string is 
+      <B>rejected</B>. </P>
+      <H3>Input specification:</H3>
+      <UL>
+        <LI>The first line has two integers M and N. M indicates the number of 
+        states of the DFA. The states are implicitly labelled q1, q2, …, qM. N 
+        denotes the length of the alphabet, i.e., the number of letters in the 
+        alphabet. The letters are implicitly labelled a, b, … Thus if N is 
+        three, then A, the alphabet of the DFA, is { a, b, c }. N is guaranteed 
+        to be less than 26. 
+        <LI>The next M lines describe the transition function T. Each line 
+        contains N integers. These integers describe the transition state given 
+        the initial state and the letter. Thus the kth integer on the ith line 
+        (ignoring first line of the input) indicates the transition state, given 
+        qi and kth alphabet. Refer to first sample input, which translates the 
+        DFA: D given above. 
+        <LI>The next line contains an integer O indicating the number of final 
+        states. This is followed by O integers on the same line. These integers 
+        together form F, i.e., the set of possible final states of the DFA. 
+        ,/li&gt; 
+        <LI>The next line has an integer K, denoting the number of input strings 
+        to follow. K input strings follow, one on each line. 
+        <LI>Each one of the K lines is has an integer W, which denotes the 
+        length of the input string, followed by a string of letters from A 
+        forming the input string. Each input strings is known to be accepted by 
+        the DFA. 
+        <LI>Each string has a missing letter denoted by '?'. Your program has to 
+        discover the missing letter. </LI></UL>
+      <H3>Output specification:</H3>
+      <P>You program should print K letters on a single line. Each of the 
+      letters replacing the question mark in its corresponding input string 
+      should make the string acceptable by the DFA. It is assured that there is 
+      a unique letter from the DFA alphabet that can take the place of '?' in 
+      the input string so as to make it acceptable to the DFA. Terminate the 
+      output by a new-line. </P><BR><BR>
+      <H3>Sample Input and Output:</H3><PRE><P>
+<B>Input:</B>
+3 2
+1 2
+3 2
+2 2
+1 2
+3
+1 ?
+7 aabb?aa
+20 babaaaaaaaaaaaaaab?a
+
+<B>Output:</B>
+bba
+
+<B>Input:</B>
+1 1
+1
+1 1
+4
+1 ?
+2 a?
+4 aa?a
+8 aaa?aaaa
+
+<B>Output:</B>
+aaaa
+
+</P>
+</PRE>
+      <P><A 
+      href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/testcase.shtml?id=25">Test 
+      Cases</A> for the problem.</P>
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=24">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD></TR></TBODY></TABLE><!-- End of content --><BR><BR>
+      <HR align=center width="70%" SIZE=1>
+      <BR><BR>
+      <DIV class=footermenu><A class=footermenu title="NCST Homepage" 
+      href="http://www.ncst.ernet.in/index.shtml" target=_blank>NCST 
+      Homepage</A> | <A class=footermenu title="Contact NCST" 
+      href="http://www.ncst.ernet.in/contactus" target=_blank>Contact NCST</A> 
+      </DIV>
+      <DIV class=footerlinks>© 2003 National Centre for Software 
+      Technology.<BR><A class=footermenu title=Disclaimer 
+      href="http://www.ncst.ernet.in/./legal/disclaimer.shtml" 
+      target=_blank>Disclaimer</A> | <A class=footermenu title="Terms of Use" 
+      href="http://www.ncst.ernet.in/./legal/termsofuse.shtml" 
+      target=_blank>Terms of Use</A> | <A class=footermenu 
+      title="Privacy Policy" 
+      href="http://www.ncst.ernet.in/./legal/privacypolicy.shtml" 
+      target=_blank>Privacy Policy</A> </DIV>
+      <DIV class=pagefooter>Last Updated: Thursday, July 10, 2003 <BR>This site 
+      is best viewed at 800x600 resolution 
+  </DIV></TD><!-- End of content --></TR></TBODY></TABLE></BODY></HTML>

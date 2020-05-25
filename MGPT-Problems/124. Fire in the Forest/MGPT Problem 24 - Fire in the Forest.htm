@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0085)http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=23 -->
+<?xml version="1.0" encoding="UTF-8"?><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>OOPJ : MGPT</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="MGPT Problem 24 - Fire in the Forest_files/oopj.css" type=text/css 
+rel=stylesheet><LINK href="MGPT Problem 24 - Fire in the Forest_files/list.css" 
+type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<TABLE id=top cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD width=163><A href="http://www.ncst.ernet.in/"><IMG height=60 
+      alt="[NCST Logo]" 
+      src="MGPT Problem 24 - Fire in the Forest_files/g_ncstlogo.gif" width=60 
+      border=0></A></TD>
+    <TD noWrap>
+      <H1>Object Oriented Programming using Java</H1></TD></TR></TBODY></TABLE><A 
+name=topofpage></A>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=left border=0>
+  <TBODY>
+  <TR vAlign=top><!-- Start of Left Menu -->
+    <TD class=gradient align=left><IMG height=1 alt="" 
+      src="MGPT Problem 24 - Fire in the Forest_files/blank.gif" width=165 
+      border=0><BR>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=leftmenu width=15><IMG height=1 alt="" 
+            src="MGPT Problem 24 - Fire in the Forest_files/blank.gif" 
+          width=15></TD>
+          <TD class=leftmenu width=133>
+            <P class=leftmenu><SPAN class=menuhead>OOPJ-2003 </SPAN><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/index.shtml">Home</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/announce.shtml">Announcements</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/slides/">Schedule</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/">Assessment</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/">Resources</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/references.shtml">References</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/links.shtml">Links</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/faq.shtml">FAQ</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/applications/yabb/" 
+            target=_blank>Discussion Board</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/contact.shtml">Faculty 
+            Contact</A><BR><BR></P></TD>
+          <TD class=leftmenu width=20><IMG height=1 alt="" 
+            src="D:\Yogesh Backup\APGDST\MGPT\MGPT Problem 24 - Fire in the Forest_files\blank(1).gif" 
+            width=17></TD></TR></TBODY></TABLE></TD><!-- End of menu -->
+    <TD class=content width="95%"><!-- Start of content -->
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=22">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=24">next</A></TD></TR></TBODY></TABLE>
+      <H2>MGPT Problem 24</H2>
+      <H3>Fire in the Forest</H3>
+      <P>Given a rectangular region consisting of forests, lakes and oil 
+      tankers, you have to write a program, which finds how much of the forest 
+      is affected by the fire caused by a powerful bolt of lightning. </P>
+      <P>The forests in the given region are all dried up and ready to burn. 
+      When a tree in the forest catches fire, all the neighboring trees catch 
+      fire too and begin to burn. This in turn burns their (unburned) 
+      neighboring trees, and thus the fire spreads in the forest. In normal 
+      circumstances, fire cannot spread over the lake. It so happens in this 
+      problem that there are some large oil tanker ships, filled to the brim 
+      with extremely flammable crude oil, anchored somewhere in lakes. If the 
+      fire ever reaches any neighboring cell of a tanker, the tanker explodes 
+      and all the oil it is carrying spills over the water of that particular 
+      lake. This allows the fire to spread over the lake. Thus a fire in one 
+      forest can spread to other forests separated by lakes, provided there is 
+      an oil tanker anchored on the edge of this forest. </P>
+      <P>The rectangular region will be given as a grid of cells. Each cell of 
+      the region will represent one of the following: a forest, a lake, or an 
+      oil tanker. For each cell in the region, there can be at the maximum eight 
+      neighboring cells. Note that the cells, which share even a corner, are 
+      considered as neighbors. </P>
+      <H3>Input specification:</H3>
+      <UL>
+        <LI>The first line has two integers <B>M</B> and <B>N</B> indicating the 
+        number of rows and columns of the region respectively. <B>0</B> &lt; 
+        <B>M</B>, <B>N</B> &lt;= <B>20</B> 
+        <LI><B>M</B> lines follow the first line. Each of these <B>M</B> lines 
+        contains <B>N</B> characters and a terminating newline. Each character 
+        is either of <B>#</B>, <B>~</B>, and <B>@</B>. The meanings of these 
+        characters are: 
+        <TABLE cellSpacing=0 cellPadding=5 align=center border=1>
+          <TBODY>
+          <TR>
+            <TD><B>#</B> </TD>
+            <TD>Forest </TD></TR>
+          <TR>
+            <TD><B>~</B> </TD>
+            <TD>Lake </TD></TR>
+          <TR>
+            <TD><B>@</B> </TD>
+            <TD>Oil Tanker </TD></TR></TBODY></TABLE>
+        <LI>The last line has two integers <B>X</B> and <B>Y</B> indicating the 
+        row and column index values where the powerful bolt of lightning 
+        strikes. <B>0</B> &lt;= <B>X</B> &lt; <B>M</B>, and <B>0</B> &lt;= 
+        <B>Y</B> &lt; <B>N</B>. If the lightning strikes in the lake, nothing 
+        happens. If the lightning strikes in the forest or on the oil tanker, 
+        fire starts spreading from that cell. </LI></UL>
+      <H3>Output specification:</H3>
+      <P>Your program should compute and print the number of forest cells burned 
+      due to the fire. </P><BR><BR>
+      <H3>Sample Input and Output:</H3><PRE><P>
+<B>Input:</B>
+4 5
+##~~#
+~~@~~
+~~~##
+#~~#~
+0 0
+
+<B>Output:</B>
+7
+
+
+<B>Input:</B>
+10 9
+#########
+~~~~~~~~~
+~~#####~~
+~~#~~~#~~
+###~@~###
+~~#~~~#~~
+#~#####~#
+#~~~@~~~#
+#~~###~~#
+#~#####~#
+4 4
+
+
+<B>Output:</B>
+36
+
+</P>
+</PRE>
+      <P><A 
+      href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/testcase.shtml?id=23">Test 
+      Cases</A> for the problem.</P>
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=22">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=24">next</A></TD></TR></TBODY></TABLE><!-- End of content --><BR><BR>
+      <HR align=center width="70%" SIZE=1>
+      <BR><BR>
+      <DIV class=footermenu><A class=footermenu title="NCST Homepage" 
+      href="http://www.ncst.ernet.in/index.shtml" target=_blank>NCST 
+      Homepage</A> | <A class=footermenu title="Contact NCST" 
+      href="http://www.ncst.ernet.in/contactus" target=_blank>Contact NCST</A> 
+      </DIV>
+      <DIV class=footerlinks>© 2003 National Centre for Software 
+      Technology.<BR><A class=footermenu title=Disclaimer 
+      href="http://www.ncst.ernet.in/./legal/disclaimer.shtml" 
+      target=_blank>Disclaimer</A> | <A class=footermenu title="Terms of Use" 
+      href="http://www.ncst.ernet.in/./legal/termsofuse.shtml" 
+      target=_blank>Terms of Use</A> | <A class=footermenu 
+      title="Privacy Policy" 
+      href="http://www.ncst.ernet.in/./legal/privacypolicy.shtml" 
+      target=_blank>Privacy Policy</A> </DIV>
+      <DIV class=pagefooter>Last Updated: Thursday, July 10, 2003 <BR>This site 
+      is best viewed at 800x600 resolution 
+  </DIV></TD><!-- End of content --></TR></TBODY></TABLE></BODY></HTML>

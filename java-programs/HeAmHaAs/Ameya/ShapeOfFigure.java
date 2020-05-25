@@ -29,6 +29,7 @@ public class ShapeOfFigure
 
         public static String shape(int i, int j)
         {
+
                 int hcnt=0;
                 int vcnt=0;
                 while(mat[i][j+hcnt] ==1 ) hcnt++;

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0070)http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=10 -->
+<?xml version="1.0" encoding="UTF-8"?><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>OOPJ : MGPT</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type><LINK 
+href="11.Something Fishy_files/oopj.css" rel=stylesheet type=text/css><LINK 
+href="11.Something Fishy_files/list.css" rel=stylesheet type=text/css>
+<META content="MSHTML 5.00.2014.210" name=GENERATOR></HEAD>
+<BODY>
+<TABLE border=0 cellPadding=0 cellSpacing=0 id=top>
+  <TBODY>
+  <TR>
+    <TD width=163><A href="http://www.ncst.ernet.in/"><IMG alt="[NCST Logo]" 
+      border=0 height=60 src="11.Something Fishy_files/g_ncstlogo.gif" 
+      width=60></A></TD>
+    <TD noWrap>
+      <H1>Object Oriented Programming using Java</H1></TD></TR></TBODY></TABLE><A 
+name=topofpage></A>
+<TABLE align=left border=0 cellPadding=0 cellSpacing=0 width="95%">
+  <TBODY>
+  <TR vAlign=top><!-- Start of Left Menu -->
+    <TD align=left class=gradient><IMG alt="" border=0 height=1 
+      src="11.Something Fishy_files/blank.gif" width=165><BR>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD class=leftmenu width=15><IMG alt="" height=1 
+            src="11.Something Fishy_files/blank.gif" width=15></TD>
+          <TD class=leftmenu width=133>
+            <P class=leftmenu><SPAN class=menuhead>OOPJ-2002 </SPAN><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/index.shtml">Home</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/announce.shtml">Announcements</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/slides/">Schedule</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/assessment/">Assessment</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/resources/">Resources</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/references.shtml">References</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/resources/links.shtml">Links</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/faq.shtml">FAQ</A><BR><BR><A 
+            href="http://saathi.ncst.ernet.in/~pgdst/discus/messages/2/2.html?1018987125" 
+            target=_blank>Discussion Board</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/~oopjfac/contact.shtml">Faculty 
+            Contact</A><BR><BR></P></TD>
+          <TD class=leftmenu width=20><IMG alt="" height=1 
+            src="C:\My Documents\Yogesh\Ncst\OOPJ\MGPT Problems\11.Something Fishy_files\blank(1).gif" 
+            width=17></TD></TR></TBODY></TABLE></TD><!-- End of menu -->
+    <TD class=content width="95%"><!-- Start of content -->
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=9">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=11">next</A></TD></TR></TBODY></TABLE>
+      <H2>MGPT Problem 11</H2>
+      <H3>Something Fishy</H3>
+      <P>There are two species of fishes, one bigger and the other smaller in a 
+      fish tank. Consider the case when there is only one fish each of the two 
+      species. Let us label the bigger fish G and the smaller one D. G has 
+      restrictions on movement while D is more agile. G always pursues D, and D 
+      tries to evade G. The fish tank for our purpose is a 2D grid of 
+      nodes.<BR>This scenario can be visualized as shown in the figure, in which 
+      a sample grid with 5 rows and 6 columns is shown. </P>
+      <DIV align=center><IMG alt="Fish Tank" border=0 height=300 
+      src="11.Something Fishy_files/directions.gif" width=575> </DIV>
+      <P>The fishes are always situated at the nodes and they move from one node 
+      to another according to specific rules. You have to write a program to 
+      simulate the movements of fishes for a given duration of time. The 
+      simulation proceeds in discrete time intervals. </P>
+      <P>In a particular time interval, first G moves from one node to another 
+      node as per its movement rules given below and then D moves from its 
+      current node to another node as per its rules. The movements are completed 
+      by G followed by D in each time interval. If in any time interval G moves 
+      to a node, which coincides with D's position, then D dies and the 
+      simulation ends. </P>
+      <P>The main criteria which decides the movement of both G as well as D is 
+      the distance between them. This distance is the Euclidean distance and is 
+      given by the length of the straight line separating the two <BR>For 
+      example. the distance d(D,G) ( as shown in the figure above) is computed 
+      as follows: </P>
+      <BLOCKQUOTE>D's position = 1,3<BR>G's position = 3,0<BR>d(D,G) = 
+        &#8730;((1-3)² + 
+        (3-0)²<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 
+        &#8730;(4 + 
+        9)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 
+        &#8730;13 &#8776; 3.61 </BLOCKQUOTE>
+      <P><B>Movement of G</B></P>
+      <UL>
+        <LI>In a time interval, G moves first 
+        <LI>G can move by one node in the horizontal or vertical direction. 
+        <LI>G always tries to make the most attacking move. Most attacking move 
+        is that move which minimizes the distance between D and G. 
+        <LI>G always makes a move even if the available move is less attacking 
+        than the present move. 
+        <LI>In case of several equally attacking moves, G decides based on the 
+        priority ordered as left, top, right, bottom. That is, if there are two 
+        possible moves left and bottom, which are equally attacking then G moves 
+        to the left. </LI></UL>
+      <P><B>Movement of D</B></P>
+      <UL>
+        <LI>In a time interval, D moves second after G's move. 
+        <LI>D can move by one node in the horizontal, vertical or diagonal 
+        direction. 
+        <LI>D always tries to make the safest move. Safest move is that move 
+        which maximizes the distance between D and G. 
+        <LI>D always makes a move even if the available move is less safe than 
+        the present move. 
+        <LI>In case of several equally safe moves, D decides based on the 
+        priority ordered as left, left upper diagonal, top, right upper 
+        diagonal, right, right lower diagonal, bottom, left lower diagonal. That 
+        is, if there are three possible moves left upper diagonal, right lower 
+        diagonal and bottom which are equally safe then D moves to the left 
+        upper diagonal node. </LI></UL>
+      <P>At no point of time can D and G move to any node beyond the boundary. A 
+      time of simulation is given as input and your program should simulate the 
+      moves up to the time of simulation specified or up to the time that D 
+      dies. </P>
+      <H3>Input specification:</H3>
+      <UL>
+        <LI>First line contains two integers M and N indicating the number of 
+        rows and columns in the problem. 
+        <LI>Second line contains two integers X1, Y1 indicating the row number 
+        and column number of David at time = 0. 
+        <LI>Third line contains two integers X2, Y2 indicating the row number 
+        and column number of Goliath at time = 0. 
+        <LI>The next line contains an integer T the time of simulation. </LI></UL>
+      <H3>Output specification:</H3>
+      <UL>
+        <LI>If David survives during the time of simulation then output X3, Y3, 
+        X4, Y4, which are the final positions of David and Goliath respectively. 
+        Separate each integer by a single white space and end the output with a 
+        new line character. 
+        <LI>If David doesn't survive during the time of simulation then output 
+        the time T and last known position X5 Y5 at which David is killed. 
+        Separate each integer by a single white space and end the output with a 
+        new line character. </LI></UL><BR><BR>
+      <H3>Sample Input and Output:</H3><PRE><P>
+<B>Input:</B>
+6 6
+2 4
+4 2
+5
+
+<B>Output:</B>
+0 4 1 4
+
+<B>Input:</B>
+5 5
+1 1
+2 2
+5
+
+<B>Output:</B>
+3 0 1
+</P>
+</PRE>
+      <P><A 
+      href="http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/testcase.shtml?id=10">Test 
+      Cases</A> for the problem.</P>
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=9">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=11">next</A></TD></TR></TBODY></TABLE><!-- End of content --><BR><BR>
+      <HR align=center SIZE=1 width="70%">
+      <BR><BR>
+      <DIV class=footermenu><A class=footermenu 
+      href="http://www.ncst.ernet.in/index.shtml" target=_blank 
+      title="NCST Homepage">NCST Homepage</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in/contactus" target=_blank 
+      title="Contact NCST">Contact NCST</A> </DIV>
+      <DIV class=footerlinks>© 2002 National Centre for Software 
+      Technology.<BR><A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/disclaimer.shtml" target=_blank 
+      title=Disclaimer>Disclaimer</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/termsofuse.shtml" target=_blank 
+      title="Terms of Use">Terms of Use</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/privacypolicy.shtml" target=_blank 
+      title="Privacy Policy">Privacy Policy</A> </DIV>
+      <DIV class=pagefooter>Last Updated: Saturday, July 20, 2002 <BR>This site 
+      is best viewed at 800x600 resolution 
+  </DIV></TD><!-- End of content --></TR></TBODY></TABLE></BODY></HTML>

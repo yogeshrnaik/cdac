@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0073)http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=13 -->
+<?xml version="1.0" encoding="UTF-8"?><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>OOPJ : MGPT</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type><LINK 
+href="14.Spot The Alien_files/oopj.css" rel=stylesheet type=text/css><LINK 
+href="14.Spot The Alien_files/list.css" rel=stylesheet type=text/css>
+<META content="MSHTML 5.00.2014.210" name=GENERATOR></HEAD>
+<BODY>
+<TABLE border=0 cellPadding=0 cellSpacing=0 id=top>
+  <TBODY>
+  <TR>
+    <TD width=163><A href="http://www.ncst.ernet.in/"><IMG alt="[NCST Logo]" 
+      border=0 height=60 src="14.Spot The Alien_files/g_ncstlogo.gif" 
+      width=60></A></TD>
+    <TD noWrap>
+      <H1>Object Oriented Programming using Java</H1></TD></TR></TBODY></TABLE><A 
+name=topofpage></A>
+<TABLE align=left border=0 cellPadding=0 cellSpacing=0 width="95%">
+  <TBODY>
+  <TR vAlign=top><!-- Start of Left Menu -->
+    <TD align=left class=gradient><IMG alt="" border=0 height=1 
+      src="14.Spot The Alien_files/blank.gif" width=165><BR>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD class=leftmenu width=15><IMG alt="" height=1 
+            src="14.Spot The Alien_files/blank.gif" width=15></TD>
+          <TD class=leftmenu width=133>
+            <P class=leftmenu><SPAN class=menuhead>OOPJ-2002 </SPAN><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/index.shtml">Home</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/announce.shtml">Announcements</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/slides/">Schedule</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/assessment/">Assessment</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/resources/">Resources</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/references.shtml">References</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/resources/links.shtml">Links</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/faq.shtml">FAQ</A><BR><BR><A 
+            href="http://saathi.ncst.ernet.in/~pgdst/discus/messages/2/2.html?1018987125" 
+            target=_blank>Discussion Board</A><BR><BR><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/contact.shtml">Faculty 
+            Contact</A><BR><BR></P></TD>
+          <TD class=leftmenu width=20><IMG alt="" height=1 
+            src="C:\My Documents\Yogesh\Ncst\OOPJ\MGPT Problems\14.Spot The Alien_files\blank(1).gif" 
+            width=17></TD></TR></TBODY></TABLE></TD><!-- End of menu -->
+    <TD class=content width="95%"><!-- Start of content -->
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=12">previous</A></TD>
+          <TD><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=14">next</A></TD></TR></TBODY></TABLE>
+      <H2>MGPT Problem 14</H2>
+      <H3>Spot The Alien</H3>
+      <P>NCST has decided to start a new center on a small blue-green planet, in 
+      a galaxy far, far away. Humans have colonized this planet for some years 
+      now, but there are some aliens on the planet as well. NCST's courses are, 
+      however, available only for humans. The aliens look exactly like humans 
+      and can be differentiated only on the basis of DNA testing. Given a set of 
+      life forms, you have to spot the alien.</P>
+      <P>The DNA of each life form can consist of only 4 components: A, C, T and 
+      G. The DNA string of each life form is given. Based on the DNA string of 
+      each life form, its Similarity with every other life form is 
+      computed.<BR>Calculation of Similarity is done using the following rules: 
+      <OL>
+        <LI>If any component is present at the same place, in two DNA strings, 
+        the Similarity count goes up by 3 points. 
+        <LI>If any component is present in both DNA strings, but not in the same 
+        place, the count goes up by 1 point. Any component already matched in 
+        the previous rule cannot be considered here. 
+        <LI>If any matching pairs of components are present in both DNA strings, 
+        the count goes up by 2 points. 
+        <LI>A pair once used for matching cannot be used again to match another 
+        part of the DNA string. </LI></OL>
+      <P>For example: </P><PRE>       X's DNA string : ATGCAT
+       Y's DNA string : GATCGG
+</PRE>
+      <UL>
+        <LI>According to rule no. 1, only C is in the same place in both strings 
+        and the count = 3. 
+        <LI>According to rule no. 2, A, T and G are present in the strings, but 
+        not at the same place, hence the count increases by 1, for each 
+        component. The count now is 6 (3 + 1 + 1 + 1). 
+        <LI>According to rule no.3, AT forms a pair present in both strings, and 
+        hence the count goes up by 2. The count now is 8 (6 + 2). There are two 
+        pairs of AT in X's DNA, but only one in Y's DNA, hence it can be counted 
+        only once. 
+        <LI>X's total similarity with Y is 8. </LI></UL>
+      <P><B>NOTE:</B> </P>
+      <UL>
+        <LI>AT and TA cannot be counted as a valid pair, i.e., both strings must 
+        have the paired components in the same sequence. 
+        <LI>A sequence like ATG in a DNA can be eligible for two pairings, i.e. 
+        AT and TG. </LI></UL>
+      <P>For detecting the alien, NCST has devised a clever system called the 
+      Similarity Measure. Each life form's Similarity Measure is the summation 
+      of it's Similarity with every other life form, i.e. If there are 3 life 
+      forms: X, Y and Z, then X's Similarity Measure is the sum of it's 
+      Similarity values with Y and Z. The life form with the least Similarity 
+      Measure is the alien. It is guaranteed that there will be only one life 
+      form with the least Similarity Measure. <BR>In the example considered X 
+      calculates its similarity with every other life form given and thus 
+      calculates its Similarity Measure as a sum of all these similarity values. 
+      </P>
+      <H3>Input specification:</H3>
+      <UL>
+        <LI>First line contains a pair of integers N and L, indicating the 
+        number of individuals and length of DNA string, respectively. N will 
+        always be greater than 2. L will always be greater than 0. 
+        <LI>The next N lines contain a character and a string each, specifying 
+        the ID of the individual and it's DNA string. The ID and the DNA string 
+        are separated by one space. </LI></UL>
+      <H3>Output specification:</H3>
+      <P>The ID of the individual who is the alien. </P><BR>
+      <H3>Sample Input and Output:</H3><PRE><P>
+<B>Input:</B>
+3 4
+X ATGC
+Y GATC
+Z AAGC
+
+<B>Output:</B>
+Y
+
+<B>Input:</B>
+3 6
+X AAAATC
+Y TCAGGA
+Z CTGAGA 
+
+<B>Output:</B>
+X
+
+</P>
+</PRE>
+      <P><A 
+      href="http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/testcase.shtml?id=13">Test 
+      Cases</A> for the problem.</P>
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=12">previous</A></TD>
+          <TD><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD>
+          <TD><A 
+            href="http://konark.ncst.ernet.in/~oopjfac/assessment/mgpt/problist.shtml?id=14">next</A></TD></TR></TBODY></TABLE><!-- End of content --><BR><BR>
+      <HR align=center SIZE=1 width="70%">
+      <BR><BR>
+      <DIV class=footermenu><A class=footermenu 
+      href="http://www.ncst.ernet.in/index.shtml" target=_blank 
+      title="NCST Homepage">NCST Homepage</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in/contactus" target=_blank 
+      title="Contact NCST">Contact NCST</A> </DIV>
+      <DIV class=footerlinks>© 2002 National Centre for Software 
+      Technology.<BR><A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/disclaimer.shtml" target=_blank 
+      title=Disclaimer>Disclaimer</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/termsofuse.shtml" target=_blank 
+      title="Terms of Use">Terms of Use</A> | <A class=footermenu 
+      href="http://www.ncst.ernet.in./legal/privacypolicy.shtml" target=_blank 
+      title="Privacy Policy">Privacy Policy</A> </DIV>
+      <DIV class=pagefooter>Last Updated: Monday, August 19, 2002 <BR>This site 
+      is best viewed at 800x600 resolution 
+  </DIV></TD><!-- End of content --></TR></TBODY></TABLE></BODY></HTML>

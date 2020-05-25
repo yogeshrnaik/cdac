@@ -1,0 +1,33 @@
+UNKNOWN {
+	FONT-SIZE: 1.1em
+}
+TD.TableHeader1 {
+	COLOR: white; BACKGROUND-COLOR: #003377
+}
+TD.colMerge {
+	TEXT-ALIGN: center
+}
+TR.TableHeader1 {
+	FONT-WEIGHT: bold; COLOR: white; BACKGROUND-COLOR: #003377; TEXT-ALIGN: center; font-stretch: wider
+}
+TR.TableHeader2 {
+	FONT-WEIGHT: bold; COLOR: white; BACKGROUND-COLOR: #888888; TEXT-ALIGN: center; font-stretch: wider
+}
+TR.listheader {
+	FONT-SIZE: 1.1em; COLOR: white; BACKGROUND-COLOR: #006699; TEXT-ALIGN: center
+}
+TR.ListAlt1 {
+	BACKGROUND-COLOR: #dcdcdc; TEXT-ALIGN: left
+}
+TR.ListAlt2 {
+	BACKGROUND-COLOR: white; TEXT-ALIGN: left
+}
+TD.ListAlt1 {
+	BACKGROUND-COLOR: #dcdcdc
+}
+TD.annot {
+	FONT-SIZE: 7pt; BACKGROUND-COLOR: white; TEXT-ALIGN: left
+}
+TD.homelink {
+	FONT-SIZE: 0.9em; BACKGROUND-COLOR: #dcdcdc; TEXT-ALIGN: left
+}

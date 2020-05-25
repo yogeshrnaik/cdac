@@ -1,0 +1,33 @@
+an error occurred while processing this directive TABLE.listing {
+	FONT-SIZE: 1.1em
+}
+TD.TableHeader1 {
+	BACKGROUND-COLOR: #003377; COLOR: white
+}
+TD.colMerge {
+	TEXT-ALIGN: center
+}
+TR.TableHeader1 {
+	BACKGROUND-COLOR: #003377; COLOR: white; FONT-WEIGHT: bold; TEXT-ALIGN: center; font-stretch: wider
+}
+TR.TableHeader2 {
+	BACKGROUND-COLOR: #888888; COLOR: white; FONT-WEIGHT: bold; TEXT-ALIGN: center; font-stretch: wider
+}
+TR.listheader {
+	BACKGROUND-COLOR: #006699; COLOR: white; FONT-SIZE: 1.1em; TEXT-ALIGN: center
+}
+TR.ListAlt1 {
+	BACKGROUND-COLOR: #dcdcdc; TEXT-ALIGN: left
+}
+TR.ListAlt2 {
+	BACKGROUND-COLOR: white; TEXT-ALIGN: left
+}
+TD.ListAlt1 {
+	BACKGROUND-COLOR: #dcdcdc
+}
+TD.annot {
+	BACKGROUND-COLOR: white; FONT-SIZE: 7pt; TEXT-ALIGN: left
+}
+TD.homelink {
+	BACKGROUND-COLOR: #dcdcdc; FONT-SIZE: 0.9em; TEXT-ALIGN: left
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0085)http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=14 -->
+<?xml version="1.0" encoding="UTF-8"?><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>OOPJ : MGPT</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="Checkers_files/oopj.css" type=text/css rel=stylesheet><LINK 
+href="Checkers_files/list.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<TABLE id=top cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD width=163><A href="http://www.ncst.ernet.in/"><IMG height=60 
+      alt="[NCST Logo]" src="Checkers_files/g_ncstlogo.gif" width=60 
+      border=0></A></TD>
+    <TD noWrap>
+      <H1>Object Oriented Programming using Java</H1></TD></TR></TBODY></TABLE><A 
+name=topofpage></A>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=left border=0>
+  <TBODY>
+  <TR vAlign=top><!-- Start of Left Menu -->
+    <TD class=gradient align=left><IMG height=1 alt="" 
+      src="Checkers_files/blank.gif" width=165 border=0><BR>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=leftmenu width=15><IMG height=1 alt="" 
+            src="Checkers_files/blank.gif" width=15></TD>
+          <TD class=leftmenu width=133>
+            <P class=leftmenu><SPAN class=menuhead>OOPJ-2003 </SPAN><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/index.shtml">Home</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/announce.shtml">Announcements</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/slides/">Schedule</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/">Assessment</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/">Resources</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/references.shtml">References</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/resources/links.shtml">Links</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/faq.shtml">FAQ</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/applications/yabb/" 
+            target=_blank>Discussion Board</A><BR><BR><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/contact.shtml">Faculty 
+            Contact</A><BR><BR></P></TD>
+          <TD class=leftmenu width=20><IMG height=1 alt="" 
+            src="D:\Yogesh Backup\APGDST\MGPT Problems\128. Checkers\Checkers_files\blank(1).gif" 
+            width=17></TD></TR></TBODY></TABLE></TD><!-- End of menu -->
+    <TD class=content width="95%"><!-- Start of content -->
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=13">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD></TR></TBODY></TABLE>
+      <H2>MGPT Problem 15</H2>
+      <H3>Checkers </H3>
+      <P>Checkers is an ancient board game played by two players, traditionally 
+      called 'Black' and 'White'. It is played by turns on an 8x8 board, which 
+      has alternating black and white squares. All the pieces are placed on 
+      black squares only and move in a diagonal fashion, i.e., a piece cannot 
+      move vertically or horizontally, but only diagonally. </P>
+      <P>When it is a player's turn, he can either make a move or a sequence of 
+      jumps. A jump is defined as a diagonal move over exactly one piece of the 
+      opposing colour. The piece that has been jumped over is said to be 
+      captured, i.e., it is removed from the board. The players try to capture 
+      as many of the opponent's pieces as possible and the game ends when all 
+      the pieces of any one player are captured. </P>
+      <DIV align=center><IMG height=250 alt=Checkers 
+      src="Checkers_files/checkers.png" width=350 border=0> </DIV>
+      <P>The figure demonstrates that the white piece (A) has a choice of moving 
+      to his left, or jumping over the black piece. Since the intent of the game 
+      is to capture as many of the opponent's pieces as possible, White should 
+      choose 'A' to jump over the black piece. After jumping, 'A' reaches a 
+      square from which he can jump further, either left or right. The jump to 
+      the left is better because it allows White to make one more jump, unlike 
+      the jump to the right, which leads to no more jumps. The white piece (B), 
+      in the figure, can only move and not jump. Thus, according to the figure, 
+      White can jump thrice in one turn, using 'A' or alternatively can move 
+      once using 'B'. Obviously, the better choice is jumping with A. </P. 
+      <p>You have to write a program which, given a board configuration, 
+      calculates the maximum number of jumps possible in one turn, by any White 
+      piece. Given the board above, the program would output '3'. </P>
+      <P><B>Notes:</B></P>
+      <UL>
+        <LI>It is illegal to jump over a piece of your own colour. 
+        <LI>A player's turn is complete when he makes either a move or a 
+        sequence of jumps. 
+        <LI>A jump can land only on an empty square. </LI></UL>
+      <H3>Input specification:</H3>
+      <P>The input will consist of eight (8) lines of eight (8) characters each. 
+      The characters will be one of the set {B, W, ~, #}. </P>
+      <UL>
+        <LI>· B =&gt; Black piece 
+        <LI>· W =&gt; White piece 
+        <LI>· ~ =&gt; An empty black square 
+        <LI>· # =&gt; White square. Note that a piece can never land on a white 
+        square </LI></UL>
+      <H3>Output specification:</H3>
+      <P>Your program has to output the maximum number of jumps that can be made 
+      by any of the white pieces. If white cannot make any jump at all, then 
+      your program must print the integer '0' (zero) </P><BR><BR>
+      <H3>Sample Input and Output:</H3><PRE><P>
+<B>Input:</B>
+#B#~#B#~
+B#B#B#B#
+#~#~#~#~
+~#B#~#~#
+#~#W#~#~
+~#~#~#~#
+#W#W#W#~
+W#W#W#W#
+
+<B>Output:</B>
+4
+
+
+<B>Input:</B>
+~#~#~#~#
+#B#B#B#B
+~#~#~#~#
+#B#B#~#~
+~#~#~#~#
+#~#B#~#~
+~#W#W#W#
+#W#W#W#W
+
+<B>Output:</B>
+5
+
+
+</P>
+</PRE>
+      <P><A 
+      href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/testcase.shtml?id=14">Test 
+      Cases</A> for the problem.</P>
+      <TABLE align=right>
+        <TBODY>
+        <TR>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/problist.shtml?id=13">previous</A></TD>
+          <TD><A 
+            href="http://www.ncst.ernet.in/education/pgdst/oopjfac/assessment/mgpt/index.shtml">contents</A> 
+          </TD></TR></TBODY></TABLE><!-- End of content --><BR><BR>
+      <HR align=center width="70%" SIZE=1>
+      <BR><BR>
+      <DIV class=footermenu><A class=footermenu title="NCST Homepage" 
+      href="http://www.ncst.ernet.in/index.shtml" target=_blank>NCST 
+      Homepage</A> | <A class=footermenu title="Contact NCST" 
+      href="http://www.ncst.ernet.in/contactus" target=_blank>Contact NCST</A> 
+      </DIV>
+      <DIV class=footerlinks>© 2003 National Centre for Software 
+      Technology.<BR><A class=footermenu title=Disclaimer 
+      href="http://www.ncst.ernet.in/./legal/disclaimer.shtml" 
+      target=_blank>Disclaimer</A> | <A class=footermenu title="Terms of Use" 
+      href="http://www.ncst.ernet.in/./legal/termsofuse.shtml" 
+      target=_blank>Terms of Use</A> | <A class=footermenu 
+      title="Privacy Policy" 
+      href="http://www.ncst.ernet.in/./legal/privacypolicy.shtml" 
+      target=_blank>Privacy Policy</A> </DIV>
+      <DIV class=pagefooter>Last Updated: Monday, September 1, 2003 <BR>This 
+      site is best viewed at 800x600 resolution 
+  </DIV></TD><!-- End of content --></TR></TBODY></TABLE></BODY></HTML>
